@@ -1,8 +1,8 @@
-/* A Bison parser, made by GNU Bison 3.0.2.  */
+/* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Bison interface for Yacc-like parsers in C
 
-   Copyright (C) 1984, 1989-1990, 2000-2013 Free Software Foundation, Inc.
+   Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -48,28 +48,29 @@ extern int yydebug;
     TOK_INTEIRO = 258,
     TOK_PRINT = 259,
     TOK_DELAY = 260,
-    TOK_ENTRADA = 261,
-    TOK_QUADRADO = 262,
-    TOK_DESENHA_UFG = 263,
-    TOK_IF = 264,
-    TOK_ELSE = 265,
-    TOK_ENQUANTO = 266,
-    EQ_OP = 267,
-    NE_OP = 268,
-    LT_OP = 269,
-    GT_OP = 270,
-    LE_OP = 271,
-    GE_OP = 272,
-    IFX = 273
+    TOK_AGUARDE = 261,
+    TOK_ENTRADA = 262,
+    TOK_QUADRADO = 263,
+    TOK_DESENHA_UFG = 264,
+    TOK_IF = 265,
+    TOK_ELSE = 266,
+    TOK_ENQUANTO = 267,
+    EQ_OP = 268,
+    NE_OP = 269,
+    LT_OP = 270,
+    GT_OP = 271,
+    LE_OP = 272,
+    GE_OP = 273,
+    IFX = 274
   };
 #endif
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef union YYSTYPE YYSTYPE;
+
 union YYSTYPE
 {
-#line 36 "rob.y" /* yacc.c:1909  */
+#line 17 "rob.y" /* yacc.c:1909  */
 
 	char *port;
 	char *ident;
@@ -79,8 +80,10 @@ union YYSTYPE
 	Node *node;
 	Stmts *stmt;
 
-#line 83 "bison.hpp" /* yacc.c:1909  */
+#line 84 "bison.hpp" /* yacc.c:1909  */
 };
+
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif

@@ -25,9 +25,10 @@ extern void unescape(char *s);
 "entrada"[0-9]+			{ yylval.port = strndup(yytext+7, yyleng-7);
 						  return(TOK_ENTRADA);
 						}
-"UFG"					{ return(TOK_DESENHA_UFG); }
-"quadrado"			 	{ return(TOK_QUADRADO); }
+"ImprimaUFG"					{ return(TOK_DESENHA_UFG); }
+"DesenheQuadrado"			 	{ return(TOK_QUADRADO); }
 "delay"					{ return(TOK_DELAY); }
+"AguardeBotao"			{ return(TOK_AGUARDE); }
 "enquanto"				{ return(TOK_ENQUANTO); }
 "=="					{ return(EQ_OP); }
 "!="					{ return(NE_OP); }
