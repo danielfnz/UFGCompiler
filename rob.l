@@ -22,7 +22,7 @@ extern void unescape(char *s);
 
 
 "ImprimaUFG"			{ return(TOK_DESENHA_UFG); }
-"DesenheQuadrado"		{ return(TOK_QUADRADO); }
+"DesenheRetangulo"		{ return(TOK_RETANGULO); }
 "AguardeBotao"			{ return(TOK_AGUARDE); }
 "=="					{ return(EQ_OP); }
 

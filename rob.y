@@ -9,7 +9,7 @@ class Stmts;
 %}
 
 %token  TOK_AGUARDE
-%token  TOK_QUADRADO TOK_DESENHA_UFG EQ_OP
+%token  TOK_RETANGULO TOK_DESENHA_UFG EQ_OP
 
 
 %union {
@@ -39,7 +39,7 @@ stmts : stmts stmt			{ $$->append($2); }
 	  | stmt				{ $$ = new Stmts($1); }
 	  ;
 
-stmt : 	TOK_QUADRADO 			 			{ $$ = QUADRADO(); }
+stmt : 	TOK_RETANGULO 			 			{ $$ = RETANGULO(); }
 		| TOK_AGUARDE						{ $$ = AGUARDE (); }
 		| TOK_DESENHA_UFG					{ $$ = UFG(); }	
 	 ;

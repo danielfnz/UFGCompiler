@@ -15,7 +15,7 @@ While *AGUARDE(){
 		return w;
 }
 
-Stmts *QUADRADO() {
+Stmts *RETANGULO() {
 		Stmts *comms = new Stmts(new OutPort("2", liga));
 								comms->append(new Delay(delayCompleto));
 								comms->append(new OutPort("2", desliga));
