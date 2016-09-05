@@ -1,0 +1,5 @@
+enquanto(entrada2==0) {
+delay 10;
+}
+UFG();
+
