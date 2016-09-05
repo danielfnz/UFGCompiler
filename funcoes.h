@@ -9,8 +9,7 @@ Int16* delayProximo = new Int16(4000);
 
 
 While *AGUARDE(){
-		Variable *porta = new Variable("i", new InPort("2"));
-		CmpOp *comp = new CmpOp(porta, EQ_OP, new Int16(0));
+		CmpOp *comp = new CmpOp(new InPort("2"), EQ_OP, new Int16(0));
 		Stmts *delay = new Stmts(new Delay(new Int16(10)));
 		While *w = new While(comp, delay);
 		return w;

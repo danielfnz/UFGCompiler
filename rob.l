@@ -1,7 +1,7 @@
 %{
 
-#include "node.h"
-#include "bison.hpp"
+	#include "node.h"
+	#include "bison.hpp"
 
 extern void unescape(char *s);
 
@@ -20,25 +20,11 @@ extern void unescape(char *s);
 
 "//".*$					{ fprintf(stderr, "Comentario: %s\n", yytext); /* comentario de linha */}
 
-"print"					{ return(TOK_PRINT); }
 
-"entrada"[0-9]+			{ yylval.port = strndup(yytext+7, yyleng-7);
-						  return(TOK_ENTRADA);
-						}
-"ImprimaUFG"					{ return(TOK_DESENHA_UFG); }
-"DesenheQuadrado"			 	{ return(TOK_QUADRADO); }
-"delay"					{ return(TOK_DELAY); }
+"ImprimaUFG"			{ return(TOK_DESENHA_UFG); }
+"DesenheQuadrado"		{ return(TOK_QUADRADO); }
 "AguardeBotao"			{ return(TOK_AGUARDE); }
-"enquanto"				{ return(TOK_ENQUANTO); }
 "=="					{ return(EQ_OP); }
-"!="					{ return(NE_OP); }
-"<="					{ return(LE_OP); }
-">="					{ return(GE_OP); }
-">"					{ return(GT_OP); }
-"<"					{ return(LT_OP); }
-
--?[0-9]+				{ yylval.nint = atoi(yytext);
-						  return(TOK_INTEIRO); }
 
 "("						{ return('('); }
 ")"						{ return(')'); }
@@ -52,7 +38,6 @@ extern void unescape(char *s);
 "-"						{ return('-'); }
 "="						{ return('='); }
 ";"						{ return(';'); }
-
 %%
 
 
