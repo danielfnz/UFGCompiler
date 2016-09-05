@@ -26,12 +26,6 @@ extern void unescape(char *s);
 "AguardeBotao"			{ return(TOK_AGUARDE); }
 "=="					{ return(EQ_OP); }
 
-"("						{ return('('); }
-")"						{ return(')'); }
-"{"						{ return('{'); }
-"}"						{ return('}'); }
-
-
 "*"						{ return('*'); }
 "/"						{ return('/'); }
 "+"						{ return('+'); }
